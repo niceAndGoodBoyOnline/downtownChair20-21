@@ -4,7 +4,7 @@ let aboutContent = document.getElementById('aboutContent')
 let forbCSS = document.getElementById('forb');
 
 let languages = {}
-let bio = "Hiyo, I am Felix! I love frog. I try to help everyone I can. <br><br>My biggest dream is to leverage automation to make 30-hour-work-weeks possible, optimal and commonplace. I believe community spaces (libraries, parks, mixed-facility-buildings etc) will play a pivitol role in the post-automation economy. <br><br>I am running for Downtown Chair because I believe everyone has a right to be heard, a right to growth, and a right to success. <br><br>The BCITSA was built to protect those rights and continues to evolve, take on new challenges and include new voices.<br><br>"
+let bio = "Hiyo, I am Felix! I love frog. I try to help everyone I can. <br><br>My biggest dream is to leverage automation to make 30-hour-work-weeks possible, optimal and commonplace. I believe community spaces (libraries, parks, mixed-facility-buildings etc) will play a pivitol role in the post-automation economy. <br><br>I am running for Downtown Chair because I believe every student has a right to be heard, a right to growth, and a right to success. <br><br>The BCITSA was built to protect all BCIT students and continues to evolve, take on new challenges and include new voices.<br><br>"
 about.addEventListener("click", toggleAbout);
 //langAlert.addEventListener("click", hideAlert);
 let langState = true;
