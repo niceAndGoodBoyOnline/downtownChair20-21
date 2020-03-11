@@ -58,8 +58,8 @@ function set_portrait_about(){
         aboutState=true;
         aboutContent.innerHTML = forg + bio + dumb
         aboutContent.style.boxShadow ="0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-        about.style.height = '95vh'
-        about.style.width = '100%'
+        about.style.height = '80vh'
+        about.style.width = '100vw'
         aboutContent.style.fontSize = "4vw"
         aboutContent.style.backgroundColor = "azure"
         aboutContent.style.padding = "12vw"
@@ -85,8 +85,8 @@ function set_landscape_about(){
     }
     else{
         aboutState=true;
-        about.style.height = '90%'
-        about.style.width = '100%'
+        about.style.height = '80vh'
+        about.style.width = '100vw'
         aboutContent.innerHTML = forg + bio + dumb
         aboutContent.style.boxShadow ="0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         aboutContent.style.fontSize = "4vh"
