@@ -51,6 +51,7 @@ function set_portrait_about(){
         aboutContent.style.backgroundColor = "transparent"
         aboutContent.style.padding = "0"
         about.style.overflowY = "visible"
+        about.style.transition = "2s"
         toggleSlide(true)
     }
     else{
@@ -62,6 +63,7 @@ function set_portrait_about(){
         aboutContent.style.fontSize = "4vw"
         aboutContent.style.backgroundColor = "azure"
         aboutContent.style.padding = "12vw"
+        about.style.transition = ".5s"
         about.style.overflowY = "scroll"
     }
 }
@@ -78,6 +80,7 @@ function set_landscape_about(){
         aboutContent.style.backgroundColor = "transparent"
         aboutContent.style.padding = "0"
         about.style.overflowY = "visible"
+        about.style.transition = "2s"
         toggleSlide(true)
     }
     else{
@@ -89,6 +92,7 @@ function set_landscape_about(){
         aboutContent.style.fontSize = "4vh"
         aboutContent.style.backgroundColor = "azure"
         aboutContent.style.padding = "4vw"
+        about.style.transition = "0.5s"
         about.style.overflowY = "scroll"
     }
 }
