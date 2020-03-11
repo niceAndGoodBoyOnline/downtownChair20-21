@@ -1,13 +1,10 @@
-
-
 body{
   font-family: monospace;
   background: linear-gradient(#4A9BE2,#A4CDF0,#ACD1F1) fixed;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #about {
-  position: absolute;
   bottom: 5vw;
   right: 0vw;
   font-size: 12vw;
@@ -16,15 +13,43 @@ body{
   height: 5vw;
   word-wrap: break-word;
   text-align: justify;
-  transition: .5s;
+  transition: .8s;
+  position: absolute;
+}
+
+#forg{
+  float: right;
+  z-index: 3;
+  height: auto;
+  width: 30vw
+}
+
+#dumb{
+  width: 80%;
+  height: auto;
+}
+
+.arrow{
+  font-size: 12vw;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+@keyframes arrow{
+  50% {
+    transform: scale(.8);
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
+.arrow:hover {
+ animation-name: arrow;
+ animation-duration: 1s;
 }
 
 .h4-responsive, p{
   color: black;
-}
-
-.squeeze{
-  font-size: 4.3vw;
 }
 
 .innerContent{
@@ -33,253 +58,98 @@ body{
   word-wrap: break-word;
 }
 
+.slipOut{
+  animation: slipOut 40.5s steps(20, end) infinite;
+}
+
+@keyframes slipOut{
+  0% {bottom: 5vw; animation-timing-function: ease-in;}
+  40% {bottom: 4.3vw; animation-timing-function: ease-in;}
+  50% {bottom: 4.3vw; animation-timing-function: ease-in;}
+  51% {bottom: -200vw; animation-timing-function: ease-in;}
+}
+
+.slipIn{
+  animation: slipIn 40.5s steps(800, end) infinite;
+
+}
+
+@keyframes slipIn{
+  0% {bottom: -10vw}
+  50% {bottom: 5vw}
+  100% {bottom: 5vw}
+}
+
 .carousel-caption {
   top:7vw;
   bottom: auto;
   background-color: rgba(200, 200, 200, 0.85);
   margin-top: 2vh;
+  overflow-x: scroll;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.langPick{
+  position: absolute;
+  z-index: 3;
+  top: 0vh;
+  padding-bottom: 2vh;
+  height: 7vw;
+  width: 7vw;
+  font-size: 5vw;
+  text-align: center;
+  justify-content: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#en{
+  left: 10vw;
+}
+
+#esp{
+  left: 25vw;
+}
+
+#kr{
+  left: 40vw;
+}
+
+#ch{
+  left: 55vw;
+}
+
+#frs{
+  left: 70vw;
+}
+
+#hdi{
+  left: 85vw;
 }
 
 @media screen and (orientation: portrait){
 
-
-
-  hr{ 
-    margin: 0vh;
-    padding: 0vh;
-  }
-
-
-
-
-  .langPick{
-    position: absolute;
-    z-index: 3;
-    top: 0vh;
-    padding-bottom: 2vh;
-    height: 7vw;
-    width: 7vw;
-    font-size: 5vw;
-    text-align: center;
-    justify-content: center;
-  }
-
-  #en{
-    left: 10vw;
-  }
-
-  #esp{
-    left: 25vw;
-  }
-
-  #kr{
-    left: 40vw;
-  }
-
-  #ch{
-    left: 55vw;
-  }
-
-  #frs{
-    left: 70vw;
-  }
-
-  #hdi{
-    left: 85vw;
-  }
-
-  .leftLink{
-    text-align: left;
-    float: left;
-  }
-
-  .rightLink{
-    text-align: right;
-    float: right;
-  }
-
-  #content{
-    height: 92%;
-    overflow-y: scroll;
-    box-sizing: content-box;  
-    margin-bottom: 25vh;
-    padding-right: 10vw;
-  }
-
-  #content img{
-    width: 95%;
-    left: -15vw;
+  #hands{
+    width: 66vw;
     height: auto;
-  }
-    
-  #navButton{
-    position: fixed;
-    text-decoration: none;
-    float: left;
-    left: -10vh;
-    z-index: 2;
-  }
-
-  #sideNav {
-    width: 0vw;
-    position: fixed;
-    z-index: 1; 
-    top: 20vh; 
-    left: 0;
-    background-color: rgba(20,20,20,0); 
-    overflow-x: hidden;
-    padding: 1vh 0 1vh 0;
-    display: block;
-    font-size: 3vh;
-    transition: .18s;
-    border-top: .2vh solid black;
-  }
-
-  #sideNav a {
-    padding: .2vw 0vh 1vw 1vw;
-    text-decoration: none;
-    color: #111;
-    display: block;
-  }
-
-  #sideNav a:hover {
-    color: #f1f1f1;
-  }
-    
-  #helper{
-    width: 100vw;
-    height: 6vh;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding-top: 2vh;
-    background-color: rgba(180,180,180,.97); 
-    overflow: hidden;
-    display: block;
-    z-index: 3;
-    transition: 0.5s;
-  }
-
-  #helper a{
-    text-decoration: none;
-    margin: 0 0 0 1vw;
-    color: #111;
-  }
-
-  #helperContent{
-    font-size: 3vh;
   }
 
 }
 
 
 @media screen and (orientation: landscape){
-  
-  #container{
-    left: 8vh;
-    padding: 0 2vh 2vh;
-    font-family: monospace;
-    height: 100%;
-    overflow-x: hidden;
-  }
 
-  #content{
-    width: 93vw;
-  }
-
-  .icon{
-    font-size: 10vh;
-  }  
-    
-  #navButton{
-    font-size: 14vh;
-    left: -10vh;
+  .carousel-caption {
+    top:7vw;
+    bottom: auto;
+    background-color: rgba(200, 200, 200, 0.85);
+    margin-top: 2vh;
+    font-size: 3vh; 
+    overflow-y: scroll;   
   }
   
-  #sideNav {
-    width: 0vw;
-    top: 20vh; 
-    left: 0;
-    padding: 1vh 0 1vh 0;
-    font-size: 2vw;
-  }
-  
-  #sideNav a {
-    padding: .2vw 0vh 2vh 1vw;
+  #hands{
+    width: 55vw;
+    height: auto;
   }
 
-  #helper{
-    height: 9vh;
-    padding-top: .5vh;
-  }
-  
-  #helper a{
-    font-size: 6.3vh;
-    margin: 0 0 0 1vw;
-  }
-
-  #content .screenshots {
-    width: 50%;
-  }
-
-  video {
-    width: 60%;
-  }
-
-}
-
-@media only screen and (orientation: portrait) {
-  
-  #container{
-    left: 8vh;
-    padding: 0 2vh 2vh;
-    font-family: monospace;
-    height: 100%;
-    overflow-x: hidden;
-  }
-
-  #content{
-    width: 78%;
-  }
-
-  .icon{
-    font-size: 4vh;
-  }
-
-  #navButton{
-    font-size: 14vh;
-    left: -10vh;
-  }
-  
-  #sideNav {
-    width: 0vw;
-    top: 20vh; 
-    left: 0;
-    padding: 1vh 0 1vh 0;
-    font-size: 2vw;
-  }
-  
-  #sideNav a {
-    padding: .2vw 0vh 3vw 1vw;
-  }
-
-  #helper{
-    height: 5.5vh;
-    padding-top: .5vh;
-  }
-  
-  #helper a{
-    font-size: 4vh;
-    margin: 0 0 0 3vw;
-  }
-
-  #content .screenshots {
-    width: 100%;
-    padding-left: 5%;
-  }
-
-  video {
-    width: 100%;
-  }
-  
 }
