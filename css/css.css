@@ -5,23 +5,61 @@ body{
 }
 
 #about {
-  bottom: 5vw;
-  right: 0vw;
+  position: absolute;
+  bottom: 10vw;
+  right: -5vw;
   font-size: 12vw;
   z-index: 3;
   width: 12vw;
-  height: 5vw;
+  height: 12vw;
   word-wrap: break-word;
   text-align: justify;
   transition: .5s;
+}
+
+.langPick{
   position: absolute;
+  z-index: 3;
+  top: 0vh;
+  padding-bottom: 2vh;
+  height: 7vw;
+  width: 7vw;
+  font-size: 5vw;
+  text-align: center;
+  justify-content: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.avail{
+  animation-name: avail;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes avail{
+  0%{ transform: scale(1) }
+  5%{ transform: scale(1.3) }
+  10%{ transform: scale(1) }
+}
+
+.unavail{
+  top: 1.5vh;
+  font-size: 2vw;
+}
+
+.carousel-item{
+  overflow: hidden;
+}
+
+.min-vh-90{
+  height: 90vh;
 }
 
 #forg{
-  float: right;
-  z-index: 3;
+  z-index: 5;
   height: auto;
-  width: 30vw
+  width: 30vw;
+  float: right;
 }
 
 #dumb{
@@ -63,10 +101,11 @@ body{
 }
 
 @keyframes slipOut{
-  0% {bottom: 5vw; animation-timing-function: ease-in;}
-  40% {bottom: 4.3vw; animation-timing-function: ease-in;}
-  50% {bottom: 4.3vw; animation-timing-function: ease-in;}
-  51% {bottom: -200vw; animation-timing-function: ease-in;}
+  0% {bottom: 16vw; animation-timing-function: ease-in-out;}
+  20% {bottom: 16vw; animation-timing-function: ease-in-out;}
+  40% {bottom: 9vw; animation-timing-function: ease-in-out;}
+  50% {bottom: 9vw; animation-timing-function: ease-in-out;}
+  51% {bottom: -200vw; animation-timing-function: ease-in-out;}
 }
 
 .slipIn{
@@ -75,32 +114,23 @@ body{
 }
 
 @keyframes slipIn{
-  0% {bottom: -10vw}
-  50% {bottom: 5vw}
-  100% {bottom: 5vw}
+  0% {bottom: -10vw; animation-timing-function: ease-in-out;}
+  50% {bottom: 18vw; animation-timing-function: ease-in-out;}
+  100% {bottom: 18vw; animation-timing-function: ease-in-out;}
 }
 
 .carousel-caption {
   top:7vw;
+  font-size: 4vw;
   bottom: auto;
   background-color: rgba(200, 200, 200, 0.85);
   margin-top: 2vh;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.langPick{
-  position: absolute;
-  z-index: 3;
-  top: 0vh;
-  padding-bottom: 2vh;
-  height: 7vw;
-  width: 7vw;
-  font-size: 5vw;
-  text-align: center;
-  justify-content: center;
-  text-shadow: 2px 2px 4px #000000;
-}
+
 
 #en{
   left: 10vw;
