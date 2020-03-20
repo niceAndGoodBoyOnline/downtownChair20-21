@@ -121,7 +121,7 @@ body{
 
 .carousel-caption {
   top:7vw;
-  font-size: 4vw;
+  font-size: 3.2vw;
   bottom: auto;
   background-color: rgba(200, 200, 200, 0.85);
   margin-top: 2vh;
@@ -130,7 +130,15 @@ body{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.h4-responsive{
+  padding-right: 5vw;
+  padding-left: 5vw;
+  font-size: 4vw;
+}
 
+.rtl{
+  direction: right;
+}
 
 #en{
   left: 10vw;

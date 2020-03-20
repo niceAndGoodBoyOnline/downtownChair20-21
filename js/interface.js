@@ -269,9 +269,26 @@ languages = makeLanguageList()
 function switchLang(langCode){
     contentList = []
 
-    for (let i = 0; i < 5; i++){
-        contentList.push( document.getElementById("head" + i) )
-        contentList.push( document.getElementById("body" + i) )
+    if (langCode == 4){
+        console.log("farsi")
+        for (let i = 0; i < 5; i++){
+            head = document.getElementById("head" + i)
+            body = document.getElementById("body" + i)
+            head.classList.toggle("rtl")
+            body.classList.toggle("rtl")
+            contentList.push( head )
+            contentList.push( body )
+        }
+    }
+    else{
+        for (let i = 0; i < 5; i++){
+            head = document.getElementById("head" + i)
+            body = document.getElementById("body" + i)
+            head.classList.toggle("rtl")
+            body.classList.toggle("rtl")
+            contentList.push( head )
+            contentList.push( body )
+       }
     }
 
     langList = languages[langCode]
