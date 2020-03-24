@@ -1,19 +1,25 @@
 let about = document.getElementById('about')
 let langAlert = document.getElementById("langAlert");
 let aboutContent = document.getElementById('aboutContent')
+let contact = document.getElementById('contact')
+let contactContent = document.getElementById('contactContent')
 let forggy = document.getElementById('forg');
 
-let bio = "Hiyo, I am Felix! I love frog. I try to help everyone I can. <br><br>My biggest dream is to leverage automation to make 30-hour-work-weeks possible, optimal and commonplace. I believe community spaces (libraries, parks, mixed-facility-buildings etc) will play a pivitol role in the post-automation economy. <br><br>I am running for Downtown Chair because I believe every student has a right to be heard, a right to growth, and a right to success. <br><br>The BCITSA was built to protect all BCIT students and continues to evolve, take on new challenges and include new voices.<br><br>"
+let bioList = ["Hiyo, I am Felix! I love frog. I try to help everyone I can.", 
+    "<br><br>My biggest dream is to leverage automation to make 30-hour-work-weeks possible, optimal and commonplace. I believe community spaces (libraries, parks, mixed-facility-buildings etc) will play a pivitol role in the post-automation economy.<br><br>", 
+    "I am running for Downtown Chair because I believe every student has a right to be heard, a right to growth, and a right to success.", 
+    "<br><br>The BCITSA was built to protect all BCIT students and continues to evolve, take on new challenges and include new voices.<br><br>"]
 about.addEventListener("click", toggleAbout);
-//langAlert.addEventListener("click", hideAlert);
+contact.addEventListener("click", toggleContact);
+let contactList = ["<p>Email: Felix.Ruttan@gmail.com</p>", "<p>Discord: FelixRuttan#5642</p>"]
 let langState = true;
 let aboutState = false;
+let contactState = false;
 let maiden = true;
 let slimer;
 let forg = "<img id='forg' src='./img/forg.png'>"
 let dumb = "<img id='dumb' src='./img/dumb_pretty.jpg'>"
 let K=1000
-
 
 function toggleAlert(){
 
@@ -39,6 +45,18 @@ function toggleAbout(){
 
 }
 
+function toggleContact(){
+
+
+    if(window.innerHeight > window.innerWidth){
+        set_portrait_contact()
+    }
+    else{
+        set_landscape_contact()
+    }
+
+}
+
 function set_portrait_about(){
 
     if (aboutState==true){
@@ -57,13 +75,13 @@ function set_portrait_about(){
     }
     else{
         aboutState=true;
-        aboutContent.innerHTML = forg + bio + dumb
+        aboutContent.innerHTML = forg + bioList[0] + bioList[1] + dumb + bioList[2] + bioList[3]
         aboutContent.style.boxShadow ="0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         about.style.height = '80vh'
         about.style.width = '100vw'
         about.style.right = "0vw"
         aboutContent.style.fontSize = "4vw"
-        aboutContent.style.backgroundColor = "azure"
+        aboutContent.style.backgroundColor = "silver"
         aboutContent.style.padding = "12vw"
         about.style.transition = ".5s"
         about.style.overflowY = "scroll"
@@ -89,26 +107,55 @@ function set_landscape_about(){
     else{
         aboutState=true;
         about.style.height = '80vh'
-        about.style.width = '100vw'
+        about.style.width = '70vw'
         about.style.bottom = "-5vw"
         about.style.right = "0vw"
-        aboutContent.innerHTML = forg + bio + dumb
+        aboutContent.innerHTML = forg + bioList[0] + bioList[1] + dumb + bioList[2] + bioList[3]
         aboutContent.style.boxShadow ="0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         aboutContent.style.fontSize = "4vh"
-        aboutContent.style.backgroundColor = "azure"
+        aboutContent.style.backgroundColor = "silver"
         aboutContent.style.padding = "4vw"
         about.style.transition = "0.5s"
         about.style.overflowY = "scroll"
     }
 }
 
-function set_portrait_css(){
+function set_portrait_contact(){
+
+    if (contactState==false){
+        contactState=true;
+        contact.style.height = "auto"
+        contact.style.width = "50vw"
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
+        contact.classList.remove("contactNudge")
+    }
+    else{
+        contactState=false;
+        contact.style.height = "auto"
+        contact.style.width = "17vw"
+        contactContent.innerHTML = ""
+        contact.classList.add("contentNudge")
+    }
 
 }
 
 
-function set_landscape_css(){
+function set_landscape_contact(){
     
+    if (contactState==false){
+        contactState=true;
+        contact.style.height = "auto"
+        contact.style.width = "50vw"
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
+        contact.classList.remove("contactNudge")
+    }
+    else{
+        contactState=false;
+        contact.style.height = "auto"
+        contact.style.width = "17vw"
+        contactContent.innerHTML = ""
+        contact.classList.add("contentNudge")
+    }
 }
 
 function onOrientationChange() {
@@ -116,11 +163,11 @@ function onOrientationChange() {
     langState = true
     switch(window.orientation) {  
       case -90: case 90:
-        set_landscape_css()
+        set_landscape_contact()
         set_landscape_about()
         break; 
       default:
-        set_portrait_css()
+        set_portrait_contact()
         set_portrait_about()
         break; 
     }
@@ -284,8 +331,8 @@ function switchLang(langCode){
         for (let i = 0; i < 5; i++){
             head = document.getElementById("head" + i)
             body = document.getElementById("body" + i)
-            head.classList.toggle("rtl")
-            body.classList.toggle("rtl")
+            head.classList.remove("rtl")
+            body.classList.remove("rtl")
             contentList.push( head )
             contentList.push( body )
        }

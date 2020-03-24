@@ -1,7 +1,38 @@
 body{
   font-family: monospace;
-  background: linear-gradient(#4A9BE2,#A4CDF0,#ACD1F1) fixed;
   overflow: hidden;
+}
+
+#contact{
+  position: absolute;
+  left: 0vw;
+  bottom: 15vh;
+  z-index: 2;
+  background-color:  silver;
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+  padding: 1.2vw;
+  height: auto;
+  width: 17vw;
+  font-size: 2.5vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contactNudge{
+  animation-name: contactNudge;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes contactNudge{
+  50%{ transform: scale(1); animation-timing-function: ease-in-out;}
+  55%{ transform: scale(1.1); animation-timing-function: ease-in-out;}
+  60%{ transform: scale(1); animation-timing-function: ease-in-out;}
+}
+
+hr{
+  background-color: dar;
+  border: none;
 }
 
 #about {
@@ -12,9 +43,11 @@ body{
   z-index: 3;
   width: 12vw;
   height: 12vw;
+  float: clear;
   word-wrap: break-word;
   text-align: justify;
   transition: .5s;
+
 }
 
 .langPick{
@@ -63,7 +96,10 @@ body{
 }
 
 #dumb{
-  width: 80%;
+  width: 30%;
+  padding: 1vw;
+  vertical-align: text-top;
+  float:left;
   height: auto;
 }
 
@@ -173,16 +209,22 @@ body{
 
 }
 
-
 @media screen and (orientation: landscape){
 
   .carousel-caption {
     top:7vw;
     bottom: auto;
-    background-color: rgba(200, 200, 200, 0.85);
     margin-top: 2vh;
     font-size: 3vh; 
     overflow-y: scroll;   
+  }
+
+  #dumb{
+    width: 17vh;
+    padding: 1vw;
+    vertical-align: text-bottom;
+    float:left;
+    height: auto;
   }
   
   #hands{
