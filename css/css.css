@@ -20,7 +20,7 @@ body{
 }
 
 #contact:hover{
-  background-color: white;
+  background-color: lightgray;
 }
 
 .contactNudge{
@@ -41,6 +41,7 @@ hr{
 }
 
 #about {
+  border-radius: 5%;
   position: absolute;
   bottom: 10vw;
   right: -5vw;
