@@ -11,13 +11,16 @@ let bioList = ["Hiyo, I am Felix! I love frog. I try to help everyone I can.",
     "<br><br>The BCITSA was built to protect all BCIT students and continues to evolve, take on new challenges and include new voices.<br><br>"]
 about.addEventListener("click", toggleAbout);
 contact.addEventListener("click", toggleContact);
-let contactList = ["<p>Email: Felix.Ruttan@gmail.com</p>", "<p>Discord: FelixRuttan#5642</p>"]
+let contactList = ["<p>Email: Felix.Ruttan@gmail.com</p>", 
+                   "<p><a href='https://www.linkedin.com/in/niceandgoodboyonline/'>LinkedIn</a></p>",
+                  "<p>Discord: FelixRuttan#5642</p>"]
 let langState = true;
 let aboutState = false;
 let contactState = false;
 let maiden = true;
 let slimer;
 let forg = "<img id='forg' src='./img/forg.png'>"
+let forg2 = "<a href='https://www.linkedin.com/in/niceandgoodboyonline/' ><img id='frog' src='./img/forg.png'></a>"
 let dumb = "<img id='dumb' src='./img/dumb_pretty.jpg'>"
 let K=1000
 
@@ -75,7 +78,7 @@ function set_portrait_about(){
     }
     else{
         aboutState=true;
-        aboutContent.innerHTML = forg + bioList[0] + bioList[1] + dumb + bioList[2] + bioList[3]
+        aboutContent.innerHTML = forg2 + bioList[0] + bioList[1] + dumb + bioList[2] + bioList[3]
         aboutContent.style.boxShadow ="0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         about.style.height = '80vh'
         about.style.width = '100vw'
@@ -110,7 +113,7 @@ function set_landscape_about(){
         about.style.width = '70vw'
         about.style.bottom = "-5vw"
         about.style.right = "0vw"
-        aboutContent.innerHTML = forg + bioList[0] + bioList[1] + dumb + bioList[2] + bioList[3]
+        aboutContent.innerHTML = forg2 + bioList[0] + bioList[1] + dumb + bioList[2] + bioList[3]
         aboutContent.style.boxShadow ="0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
         aboutContent.style.fontSize = "4vh"
         aboutContent.style.backgroundColor = "silver"
@@ -126,7 +129,7 @@ function set_portrait_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
         contact.classList.remove("contactNudge")
     }
     else{
@@ -146,7 +149,7 @@ function set_landscape_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
         contact.classList.remove("contactNudge")
     }
     else{
