@@ -161,6 +161,7 @@ function set_landscape_contact(){
 function onOrientationChange() {
     aboutState = true
     langState = true
+    contactState = true
     switch(window.orientation) {  
       case -90: case 90:
         set_landscape_contact()
@@ -210,29 +211,29 @@ toggleSlide(true)
 function makeLanguageList(){
     //translated
     let en = [
-        "FELIX FOR DOWNTOWN CHAIR 20-21"
+        "Felix for Downtown Chair 2020-2021"
         ,
         '<em>"Alone we can do so little; <br>together we can do so much"<br><br>― Helen Keller</em>'
         ,
-        "STRENGTHEN THE DOWNTOWN CROSS-PROGRAM COMMUNITY"
+        "Strengthen the Downtown Cross-Program Community"
         ,
         "Constant collaboration, net-working and strong-peer-bonds are a few reasons BCIT graduates are highly effective in the workplace.\
         <br><br>Industry leaders organize as a super-tribe and so can we! \
         <br><br>Let's lay the cornerstone of a tradition of inter-program, inter-set, and inter-level collaboration."
         ,
-        "BUILD A BRIDGE BETWEEN BCITSA & ISEP"
+        "Build a Bridge Between BCITSA & ISEP"
         ,
         "<strong>Every ISEP student has access to all of the BCITSA's services. </strong>\
         <br><br>Spreading awareness about this, making services more accessible, and ensuring all ISEP students feel supported and part of the DTC community is important to me. \
         <br><br>The Student Association works for every student, <em>including you!</em>"
         ,
-        "PROMOTE WELLNESS SERVICES"
+        "Promote Wellness Services"
         ,
         "Making the most of your time at BCIT and getting the most out of your education requires students (<em>and teachers!</em>) to take wellness seriously. \
         <br><br>Physical and mental wellbeing have a huge impact on our professional and personal lives. \
         <br><br>I believe putting wellness services front and centre, for everyone at the DTC, is critical to impoving the experience of every student." 
         ,
-        "A PLEDGE TO LISTEN"
+        "A Pledge to Listen"
         ,
         "My greatest strength is listening!\
         <br><br>I believe I can serve the DTC student body much better by listening than prescribing. \
