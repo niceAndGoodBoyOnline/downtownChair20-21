@@ -129,7 +129,7 @@ function set_portrait_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
         contact.classList.remove("contactNudge")
     }
     else{
@@ -149,7 +149,7 @@ function set_landscape_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
         contact.classList.remove("contactNudge")
     }
     else{
