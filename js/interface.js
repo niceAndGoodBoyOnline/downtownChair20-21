@@ -12,7 +12,7 @@ let bioList = ["Hiyo, I am Felix! I love frog. I try to help everyone I can.",
 about.addEventListener("click", toggleAbout);
 contact.addEventListener("click", toggleContact);
 let contactList = ["<p>Email: Felix.Ruttan@gmail.com</p>", 
-                    "<p><a href='https://www.linkedin.com/in/niceandgoodboyonline/ target='_blank' '>LinkedIn</a></p>",
+                    "<p><a href='https://www.linkedin.com/in/niceandgoodboyonline/' target='_blank'>LinkedIn</a></p>",
                     "<p>Discord: FelixRuttan#5642</p>"]
 let langState = true;
 let aboutState = false;
