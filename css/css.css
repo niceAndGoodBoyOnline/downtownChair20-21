@@ -109,6 +109,13 @@ hr{
   float: right;
 }
 
+#forg2{
+  z-index: 5;
+  height: auto;
+  width: 30vw;
+  float: right;
+}
+
 #dumb{
   width: 30%;
   padding: 1vw;

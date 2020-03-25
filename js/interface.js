@@ -12,15 +12,15 @@ let bioList = ["Hiyo, I am Felix! I love frog. I try to help everyone I can.",
 about.addEventListener("click", toggleAbout);
 contact.addEventListener("click", toggleContact);
 let contactList = ["<p>Email: Felix.Ruttan@gmail.com</p>", 
-                   "<p><a href='https://www.linkedin.com/in/niceandgoodboyonline/ target='_blank' '>LinkedIn</a></p>",
-                  "<p>Discord: FelixRuttan#5642</p>"]
+                    "<p><a href='https://www.linkedin.com/in/niceandgoodboyonline/ target='_blank' '>LinkedIn</a></p>",
+                    "<p>Discord: FelixRuttan#5642</p>"]
 let langState = true;
 let aboutState = false;
 let contactState = false;
 let maiden = true;
 let slimer;
 let forg = "<img id='forg' src='./img/forg.png'>"
-let forg2 = "<a href='https://www.linkedin.com/in/niceandgoodboyonline/' target='_blank' ><img id='frog' src='./img/forg.png'></a>"
+let forg2 = "<a href='https://www.linkedin.com/in/niceandgoodboyonline/' target='_blank' style='float:right'><img id='frog2' src='./img/forg.png'></a>"
 let dumb = "<img id='dumb' src='./img/dumb_pretty.jpg'>"
 let K=1000
 
@@ -129,7 +129,7 @@ function set_portrait_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
         contact.classList.remove("contactNudge")
     }
     else{
@@ -149,7 +149,7 @@ function set_landscape_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]
         contact.classList.remove("contactNudge")
     }
     else{
