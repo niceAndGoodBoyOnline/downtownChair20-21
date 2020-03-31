@@ -63,7 +63,6 @@ body{
 }
 
 .avail{
-  cursor: pointer;
   animation-name: avail;
   animation-duration: 5s;
   transition-property: transform;
@@ -85,7 +84,6 @@ body{
 }
 
 .unavail{
-  cursor: not-allowed;
   top: 1.5vh;
   font-size: 2vw;
 }

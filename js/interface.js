@@ -129,7 +129,7 @@ function set_portrait_contact(){
         contactState=true;
         contact.style.height = "auto"
         contact.style.width = "50vw"
-        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1] + contactList[2]
+        contactContent.innerHTML = "<hr>" + contactList[0] + contactList[1]+ contactList[2]
         contact.classList.remove("contactNudge")
     }
     else{
@@ -304,11 +304,42 @@ function makeLanguageList(){
         मेरा मौजूदा लक्ष्य यही है जो मैने अपनी कक्षा, सी.एस.टी, सी.आई.टी और फुल-स्टैक के विद्यार्थी,अंतरराष्ट्रीय विद्यार्थी, वर्तमान डाउनटाउन अध्यक्ष- डौसन वर्बोवन और बी.सी.आई.टी.एस.ए के पार्षद, कार्य पालक एवं कर्मचारियों से सुना है। <br><br>\
         यदि मैं डाउनटाउन का अध्यक्ष बन जाता हूँ तो मेरी सबसे बड़ी सफलता की आशा यह होगी कि विद्यार्थियों को यह एहसास हो कि बी.सी.आई.टी.एस.ए उनके लिए है और उनसे हीं बना है। "
     ]
+    let ch = [
+        "2020-2021 DT 主席候选人- Felix"
+        ,
+        '一个人能做的不多，但一群人可以创造无限可能。 --海伦凯勒'
+        ,
+        "加强Downtown跨专业间团体的交流"
+        ,
+        "因为持续的合作, 网路的合作和强而有力的同伴关系等....这几个原因，BCIT的毕业生在职场有很大的影响力。<br><br>\
+        我们也能像职业领袖一样，组织一个super-tribe(例如：CIT和CST这两个专业在商业上一起合作)！ <br><br>\
+        让我们为跨专业, 跨班级与跨届的合作传统奠定基础。"
+        ,
+        "建造学生会(BCITSA)与ISEP之间的桥梁!"
+        ,
+        "<strong>所有ISEP的学生 都可以使用BCITSA学生会的服务项目。</strong><br><br>\
+        我觉得要让所有人意识到，我要让所有学生更容易能被学生会 (BCITSA) 服务，我也要保证让ISEP的学生感受到被学校支持，还有是我们DTC团体的一部分很重要。<br><br>\
+        学生会是帮所有人服务的，当然包括你!!"
+        ,
+        "提升健康方面的服务。"
+        ,
+        "我想要让所有的学生 (与老师) 花了很多时间在BCIT里来获得所需的及最好的教育的同时，也有健康的身心 <br><br>\
+        拥有健康的身心对我们所有人生活都有很大的影响。 <br><br>\
+        我相信设立健康服务(生理与心理)为优先及中心对所有DTC的人们的经历都至关重要。<br><br>"
+        ,
+        "聆听你的声音!"
+        ,
+        "我最大的优点就是倾听了! <br><br>\
+        我相信比起规定，倾听更能让我有更好的服务给所有DTC的学生。<br><br>\
+        我现在的目标就是向学校反映我从我的班级，我的支持者, CST, CIT, 国际学生, 现任的DT主席Dawson Verboven, 学生会的顾问和所有的学生那所听到的。<br><br>\
+        我希望作为Downtown主席最大的成功就是让所有的学生能感觉到被我们学生会倾听和服务。"
+
+
+    ]
 
     //untranslated
     let esp = en
     let kr = en
-    let ch = en
 
     languages = [en, esp, kr, ch, frs, hdi]
     
